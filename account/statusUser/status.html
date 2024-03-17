@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/account/statusUser/status.css">
+</head>
+<body>
+    <div class="body">
+        <div class="form">
+            <div class="form-user">
+                <div class="title">User Information</div>
+                <div class="avatar">
+                    <div>Avatar</div>
+                    <input type="file" accept="image/*" id="avatarInput">
+                    <button onclick="uploadAvatar()">Check avatar</button>
+                    <div class="changeavt">
+                        <div id="ckavt"></div>
+                        <div id="suy" class="none">>></div>
+                        <div id="avatarPreview"></div>
+                    </div>
+                </div>
+    
+                <div class="username">
+                    <div class="nickname">Nickname:</div>
+                    <div id="username"></div>
+                </div>
+                <input type="text" id="input-nickname" placeholder="change your nickname here">
+    
+                <div class="gioitinh">
+                    <div>sex: </div>
+                    <select id="sex">
+                        <option value="Nam">Male</option>
+                        <option value="Nu">Female</option>
+                        <option value="Khac">Other</option>
+                        <option value="An" selected>Hide</option>  
+                      </select>
+                </div>
+    
+                <div class="note">
+                    <div>note:</div>
+                    <textarea cols="60" rows="3" maxlength="100"></textarea>
+                </div>
+    
+                
+    
+                <button onclick="reload()">Update</button>
+                <button id="logout-button">Đăng xuất</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <a href="/homepage/homepage.html">Trang chủ</a>
+
+    <script src="/config.js"></script>
+    <script type="module">
+
+        // Cấu hình Firebase
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+        import { getAuth, signOut, onAuthStateChanged, } from 'https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js';
+        import { getFirestore, doc, getDoc, updateDoc, collection, query, where, getDocs, addDoc ,deleteDoc} from 'https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js';
+
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const storage = getFirestore(app);
+        var uidDefault;
+        // Lắng nghe sự kiện đăng xuất
+        var logoutButton = document.getElementById('logout-button');
+        logoutButton.addEventListener('click', function () {
+            // Đăng xuất người dùng
+            signOut(getAuth())
+                .then(function () {
+                    console.log('Đăng xuất thành công');
+                    // Chuyển trở lại trang đăng nhập/đăng ký
+                    window.location.href = '/homepage/homepage.html';
+                })
+                .catch(function (error) {
+                    console.error('Lỗi đăng xuất: ' + error);
+                });
+        });
+
+    </script>
+
+</body>
+<script src="/account/statusUser/status.js"></script>
+</html>

@@ -1,0 +1,72 @@
+#ckavt img{
+    width: 70px;
+    height: 70px;
+    border-radius: 35px 35px;
+    object-fit: cover;
+    border: 1px solid red;
+}
+
+#avatarPreview img{
+    width: 70px;
+    height: 70px;
+    border-radius: 35px 35px;
+    object-fit: cover;
+}
+
+
+
+#suy{
+    width: 30px;
+    height: 50px;
+}
+
+.changeavt{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.form{
+    border: 1px solid red;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.none{
+    display: none;
+}
+
+.username{
+    display: flex;
+    margin-top: 15PX;
+}
+
+#username{
+    margin-left: 5px;
+}
+
+.gioitinh{
+    display: flex;
+    margin-top: 15PX;
+}
+
+.title{
+    text-align: center;
+    font-size: 24px;
+}
+
+.notes{
+    width: 150px;
+    height: 100px;
+}
+
+#sex{
+    margin-left: 5px;
+}
