@@ -1,0 +1,219 @@
+body{
+    margin: 0;
+    /* background-color:; */
+    /* opacity: 0.9; */
+    background-image: linear-gradient(to right bottom, #31363F , #76ABAE 60%, #EEEEEE ) ;
+}
+
+body::-webkit-scrollbar { display: none; }
+
+.navi button{
+    margin-left: 30px;
+}
+
+.main{
+    width: 500px;
+    border: 1px solid green;
+    margin-top: 50px;
+}
+.showsl{
+    font-size: 17px;
+    margin-left: 9px;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+}
+.new-post{
+    background-color: blue;
+    color: white;
+    border: none;
+    height: 30px;
+    margin-left: 355px;
+}
+
+.post1{
+    background-color: aliceblue;
+    height: 50px;
+    width: 480px;
+    margin-left: 10px;
+}
+
+.post2{
+    background-color: aliceblue;
+    height: 50px;
+    width: 480px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.cmt1{
+    margin-top:5px;
+}
+
+.postby{
+    margin-top: 15px;
+    padding: 5px 0;
+}
+
+.hp{
+    margin-left: 40px;
+}
+
+.box{
+    width: 800px;
+    height: 200px;
+    background-color: rgb(232, 224, 224);
+    margin-top: 20px;
+}
+
+.wall{
+    display: flex;
+    justify-content: center;
+}
+
+.usnpost{
+    margin-top: 30px;
+    color: red;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    border: 1px solid green;
+    /* height: 40px; */
+    background-color: #FFCC99;
+}
+
+.header img{
+    width: 180px;
+    /* border: 1px solid red; */
+}
+
+.logo{
+    /* border: 1px solid blue; */
+    height: 40px;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    display: flex;
+    border: 1px solid red;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 125px;
+    margin-left: 28px;
+
+}
+
+.menubar{
+    display: flex;
+    background: #121212;
+    align-items: center;
+    backdrop-filter: blur(100px);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+}
+
+.menubar a{
+    text-decoration: none;
+}
+.first-text{
+    color: white;
+    padding: 20px 17px;
+    margin-left: 44.5px;
+}
+
+.text{
+    color: white;
+    padding: 20px 17px;
+}
+
+.first-text:hover{
+    color: #277AF7;
+    cursor: pointer;
+    border-bottom: 2px solid #277AF7;
+}
+
+.text:hover{
+    color: #277AF7;
+    cursor: pointer;
+    border-bottom: 2px solid #277AF7;
+}
+
+.account{
+    color: white;
+    padding: 20px 17px;
+    margin-left: 25px;
+    display: flex;
+    justify-content: center;
+}
+#username{
+    white-space: nowrap;   
+    width: 89px; 
+    overflow: hidden;  
+    text-overflow: clip; 
+    display: flex; 
+    justify-content:flex-start;
+}
+
+.account:hover{
+    color: #277AF7;
+    cursor: pointer;
+    border-bottom: 2px solid #277AF7;
+}
+
+.filegame{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    background-color: #C8AF85;
+    height: 60px;
+    width: 170px;
+    border-radius: 0 0 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+}
+
+.signin{    
+    color: white;
+    padding: 20px 17px;
+    margin-left: 64.5px;
+    display: flex;
+    justify-content: center;
+}
+
+.signin:hover{
+    color: #277AF7;
+    cursor: pointer;
+    border-bottom: 2px solid #277AF7;
+}
+#post-form{
+    width: 80%; height: 200px; background-color: #939EA0;
+    margin-top: 100px;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+}
+
+.crtpost{
+    margin-left: 30%;
+    margin-top: 20px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/community/com.css">
+</head>
+
+<body>
+
+    <div class="dau">
+        <div class="menubar">
+    
+            <div class="logo"><img src="/img/Honkai_Star_Raillogo.jpg" alt=""></div>
+            <a href="/homepage/homepage.html"><div class="first-text">Trang chủ</div></a>
+            <a href="/community/com.html"><div class="text">Cộng đồng</div></a>
+            <a href="/guide/tips/guide.html"><div class="text">Hướng dẫn</div></a>
+            <a href="/character/char.html" class="text">Nhân vật</a>
+            <a href="/news/news.html"><div class="text">Tin tức</div></a> 
+            <a href="/shop/page1/trang1.html"><div class="text">Sản phẩm</div></a>
+            <a href=""><div class="text">Thế giới</div></a>
+            <a href="/account/statusUser/status.html" id="user-info" class="account"><div id="username"></div></a>
+            <a href="/account/login/login.html" id="login" class="signin">Sign In</a>
+            <a href="/filegame/StarRail_setup_ua_45b54f1468ea.exe" download class="filegame"><div>DOWNLOAD</div></a>
+            
+        </div>
+    </div>
+
+    <div class="form">
+        <form id="post-form">
+            <div class="crtpost">
+                <div><input type="text" id="post-title" placeholder="Title"></div>
+                <div><textarea id="post-content" rows="4" cols="50" placeholder="Content" required></textarea></div>
+                <button type="submit">Đăng</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="wall">
+        <div id="render-post"></div>
+    </div>
+
+    <div id="warn">
+        Đăng nhập để xem các bài viết
+    </div>
+
+
+    <script src="/config.js"></script>
+
+</body>
+<script src="/community/com.js" type="module"></script>
+</html>
