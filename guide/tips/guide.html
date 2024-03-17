@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/guide/tips/guide.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <script src="/config.js"></script>
+    <div class="menubar">
+    
+        <div class="logo"><img src="/img/Honkai_Star_Raillogo.jpg" alt=""></div>
+        <a href="/homepage/homepage.html" class="first-text">Trang chủ</a>
+        <a href="/community/com.html" class="text">Cộng đồng</a>
+        <a href="/guide/tips/guide.html" class="text">Hướng dẫn</a>
+        <a href="/character/char.html" class="text">Nhân vật</a>
+        <a href="/news/news.html"><div class="text">Tin tức</div></a> 
+        <a href="/shop/page1/trang1.html" class="text">Sản phẩm</a>
+        <a href="" class="text">Thế giới</a>
+        <a href="/account/statusUser/status.html" id="user-info" class="account"><div id="username"></div></a>
+        <a href="/account/login/login.html" id="login" class="signin">Sign In</a>
+        <a href="/filegame/StarRail_setup_ua_465b040048cb.exe" download class="filegame"><div>Tải game</div></a>
+        
+    </div>
+    <div class="middle">
+    <div class="form">
+
+
+
+
+    <div class="kh">
+        <a href="/homepage/homepage.html"><div><i class="fa-solid fa-house"></i>Homepage</div></a>
+        <a href="/guide/tips/guide.html"><div>Guide</div></a>
+        <ul type="disc">
+            <li onclick="nbz()">Newbie zone</li>
+            <li onclick="gg()">Game guides</li>
+            <li onclick="gmg()">Game modes guides</li>
+            <li onclick="eqm()">Equipment</li>
+            <li onclick="dtb()">Database</li>
+            <li onclick="lore()">Lore</li>
+        </ul>
+    </div>
+
+    <div class="infor">
+        <div>
+        <div>Honkai: Star Rail Guides</div>
+
+        <div class="title">Newbie zone</div>
+
+        <div class="infor-title">
+            <div id="nbz"></div>
+        </div>
+
+        <div class="title">Game guides</div>
+
+        <div class="infor-title">
+            <div id="gg"></div>
+        </div>
+
+        <div class="title">Game modes guides</div>
+        <div class="gmg">
+            <div class="s-title">Forgotten hall</div>
+            <div class="infor-title">
+
+            <div id="fgh"></div>
+
+        </div>
+
+            <div class="s-title">Pure Fiction</div>
+            <div class="infor-title">
+
+                <div id="pft"></div>
+
+        </div>
+            <div class="s-title">Simulated Universe</div>
+            
+            <div class="infor-title">
+                <div id="su"></div>
+        </div>
+
+        </div>
+
+        <div class="title">Equipment</div>
+
+        <div class="infor-title">
+            <div id="eqm"></div>
+        </div>
+
+        <div class="title">Database</div>
+        
+        <div class="infor-title">
+            <div id="dtb"></div>
+        </div>
+
+        <div class="lore">
+            <div class="title">Lore</div>
+            <div id="lore"></div>
+
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+
+<script type="module">
+
+    // Cấu hình Firebase
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+    import { getAuth, signOut, onAuthStateChanged, } from 'https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js';
+    import { getFirestore, doc, getDoc, updateDoc, collection, query, where, getDocs, addDoc ,deleteDoc} from 'https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js';
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const storage = getFirestore(app);
+    var uidDefault;
+
+    onAuthStateChanged(getAuth(), function (user) {
+        var user_info = document.getElementById('user-info');
+        var loginForm = document.getElementById('login');
+
+
+        if (user) {
+            var usernameElement = document.getElementById('username');
+            usernameElement.textContent = user.displayName ? user.displayName : user.email; // Display user email or other info
+            loginForm.style.display = 'none';
+            user.providerData.forEach((profile) => {
+                console.log("Sign-in provider: " + profile.providerId);
+                console.log("  Provider-specific UID: " + profile.uid);
+                console.log("  Name: " + profile.displayName);
+                console.log("  Email: " + profile.email);
+                console.log("  Photo URL: " + profile.photoURL);
+                uidDefault = profile.uid;
+                showuser.classList.add("none")
+            });
+            // Call displayPosts after uidDefault is set
+            displayPosts();
+        } else {
+            user_info.style.display = 'none';
+
+        }
+    });
+
+
+    </script>
+
+</body>
+<script src="/guide/tips/guide.js"></script>
+</html>

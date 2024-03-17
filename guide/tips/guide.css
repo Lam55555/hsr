@@ -1,0 +1,277 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: black;
+    color: white; */
+}
+.form{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+body::-webkit-scrollbar { display: none; }
+li:hover{
+    color: #c3c192;
+    cursor: pointer;
+}
+.infor{
+    display: flex;
+    justify-content: center;
+    background-color: #ADBC9F;
+    width: 100%;
+    margin-top: 40px;
+    height: auto;
+}
+
+.menubar{
+    display: flex;
+    background: #121212;
+    align-items: center;
+    backdrop-filter: blur(100px);
+    position: fixed;
+    top: 0;
+}
+
+.menubar a{
+    text-decoration: none;
+}
+
+
+.first-text{
+    color: white;
+    padding: 20px 17px;
+    margin-left: 44.5px;
+}
+
+.text{
+    color: white;
+    padding: 20px 17px;
+}
+
+.first-text:hover{
+    color: #277AF7;
+    cursor: pointer;
+    border-bottom: 2px solid #277AF7;
+}
+
+.text:hover{
+    color: #277AF7;
+    cursor: pointer;
+    border-bottom: 2px solid #277AF7;
+}
+
+.account{
+    /* border: 1px solid red; */
+    color: white;
+    padding: 20px 17px;
+    margin-left: 25px;
+    display: flex;
+    justify-content: center;
+}
+#username{
+    white-space: nowrap;   width: 89px; overflow: hidden;  text-overflow: clip; display: flex; justify-content:flex-start;
+}
+
+.account:hover{
+    color: #277AF7;
+    cursor: pointer;
+    border-bottom: 2px solid #277AF7;
+}
+
+.filegame{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    background-color: #C8AF85;
+    height: 60px;
+    width: 170px;
+    border-radius: 0 0 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+}
+
+.signin{    
+    /* border: 1px solid red; */
+    color: white;
+    padding: 20px 17px;
+    margin-left: 64.5px;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+
+.signin:hover{
+    color: #277AF7;
+    cursor: pointer;
+    border-bottom: 2px solid #277AF7;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 125px;
+    margin-left: 28px;
+
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 125px;
+    margin-left: 28px;
+
+}
+
+
+.main{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    border: 1px solid red;
+    height: auto;
+}
+
+.kh{
+    /* border: 1px solid red; */
+    margin-top: 60px;
+    color: white;
+    background-color: #436850;
+    height: auto;
+
+}
+
+.kh a{
+    color: white;
+    background-color: #436850;
+}
+
+i{
+    color: #12372A;
+    margin-left: 5px;
+}
+
+.title{
+    font-weight: bold;
+    color: white;
+    margin-top: 5px;
+}
+
+.s-title{
+    font-weight: bold;
+    color: white;
+    margin-top: 5px;
+}
+
+/* .infor img{
+    width: 70px;
+}
+
+.infor a{
+    display: flex;
+    background-color: #2C2D33;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    width: 270px;
+    margin: 10px 20px;
+}
+
+.infor a div{
+
+} */
+
+.infor-title{
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#nbz{
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#gg{
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#fgh{
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#su{
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#pft{
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#dtb{
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#eqm{
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#lore{
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.divlon{
+    display: flex;
+    background-color: #2C2D33;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    margin: 10px 20px;
+    width: 270px;
+}
+
+.divlon img{
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
+
+.text-guide{
+    width: 140px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.ctn{
+    text-decoration: none;
+}
+
+
+
