@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/news/news.css">
+</head>
+<body>
+    <script src="/config.js"></script>
+    <div class="dau">
+    <div class="menubar">
+
+        <div class="logo"><img src="/img/Honkai_Star_Raillogo.jpg" alt=""></div>
+        <a href="/homepage/homepage.html"><div class="first-text">Trang chủ</div></a>
+        <a href="/community/com.html"><div class="text">Cộng đồng</div></a>
+        <a href="/guide/tips/guide.html"><div class="text">Hướng dẫn</div></a>
+        <a href="/character/char.html"><div class="text">Nhân vật</div></a>
+        <a href="/news/news.html"><div class="text">Tin tức</div></a> 
+        <a href=""><div class="text">Thế giới</div></a>
+        <a href="/shop/page1/trang1.html"><div class="text">Sản phẩm</div></a>
+        <a href="/account/login/login.html"><div class="account" id="username">Sign In</div></a>
+        <a href="/filegame/StarRail_setup_ua_45b54f1468ea.exe" download class="filegame"><div>Tải game</div></a>
+        
+    </div>
+</div>
+    <div class="main">
+        <div class="content">
+            <div class="ctn-main">
+                <div>
+            <div class="tieude">Tiếng Gọi Của Chuyến Tàu Trên Dải Ngân Hà</div>
+
+                <div class="tt">
+                    <div class="tt-tieude"><span>Mới Nhất</span><img src="/img/news.png" alt=""><div></div></div>
+                    <div class="tt-tieude"><span>Tin Tức</span><img src="/img/news.png" alt=""><div></div></div>
+                    <div class="tt-tieude"><span>Sự Kiện</span><img src="/img/news.png" alt=""><div></div></div>
+                    <div class="tt-tieude"><span>Thông Báo</span></div>
+                </div>
+
+            <div class="info">
+                <div id="news-info"></div>
+            </div>
+
+            <button onclick="add()">Xem thêm</button>
+        </div>
+        </div>
+        </div>
+        <img src="/img/ctn/25463.jpg" class="background">
+    </div>
+
+    <div class="footer">
+        <div class="footer-line1">
+            <img src="/img/Honkai_Star_Raillogo.jpg" alt="">
+            <img src="/img/nextlg.png" alt="">
+        </div>
+
+        <div class="footer-line2">
+            <a href="" class="txt-ftline2"><div>Privacy Policy</div></a>
+            <a href="" class="txt-ftline2"><div>Terms of Service</div></a>
+            <a href="" class="txt-ftline2"><div>About us</div></a>
+            <a href="" class="txt-ftline2"><div>Contact us</div></a>
+        </div>
+
+        <div class="footer-line3">"PlayStation Family Mark", "PlayStation" and "PS5 logo" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.</div>
+
+        <div class="footer-line4">
+            <div>Epic, Epic Games, Epic Games Store, the Epic Games Store logo, and Epic Online Services are trademarks and/or registered trademarks of Epic Games. All other trademarks are the property of their respective owner.</div>
+            
+        </div>
+
+
+    </div>
+    <script type="module">
+
+        // Cấu hình Firebase
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+        import { getAuth, signOut, onAuthStateChanged, } from 'https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js';
+        import { getFirestore, doc, getDoc, updateDoc, collection, query, where, getDocs, addDoc ,deleteDoc} from 'https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js';
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const storage = getFirestore(app);
+        var uidDefault;
+        onAuthStateChanged(getAuth(), function (user) {
+            var user_info = document.getElementById('user-info');
+            var loginForm = document.getElementById('login');
+            if (user) {
+                var usernameElement = document.getElementById('username');
+                usernameElement.textContent = user.displayName ? user.displayName : user.email; // Display user email or other info
+                loginForm.style.display = 'none';
+                user.providerData.forEach((profile) => {
+                    console.log("Sign-in provider: " + profile.providerId);
+                    console.log("  Provider-specific UID: " + profile.uid);
+                    console.log("  Name: " + profile.displayName);
+                    console.log("  Email: " + profile.email);
+                    console.log("  Photo URL: " + profile.photoURL);
+                    uidDefault = profile.uid;
+                });
+                // Call displayPosts after uidDefault is set
+                displayPosts();
+            } else {
+                user_info.style.display = 'none';
+            }
+        });
+        </script>
+</body>
+<script src="/news/news.js"></script>
+</html>

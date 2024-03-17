@@ -1,0 +1,283 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body::-webkit-scrollbar { display: none; }
+
+
+.header{
+    display: flex;
+    border: 1px solid red;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 125px;
+    margin-left: 25px;
+
+}
+
+.menubar{
+    display: flex;
+    background: #121212;
+    align-items: center;
+    backdrop-filter: blur(100px);
+}
+
+.menubar a{
+    text-decoration: none;
+}
+
+.first-text{
+    color: white;
+    padding: 20px 17px;
+    margin-left: 44.5px;
+}
+
+.text{
+    color: white;
+
+    padding: 20px 17px;
+}
+
+.first-text:hover{
+    color: #277AF7;
+    cursor: pointer;
+    border-bottom: 2px solid #277AF7;
+}
+
+.text:hover{
+    color: #277AF7;
+    cursor: pointer;
+    border-bottom: 2px solid #277AF7;
+}
+
+.account{
+    color: white;
+    padding: 20px 17px;
+    margin-left: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.signin{    
+    /* border: 1px solid red; */
+    color: white;
+    padding: 20px 17px;
+    margin-left: 64.5px;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+
+.signin:hover{
+    color: #277AF7;
+    cursor: pointer;
+    border-bottom: 2px solid #277AF7;
+}
+
+#username{
+    white-space: nowrap;   width: 89px;   border: 1px solid #000000;  overflow: hidden;  text-overflow: clip; display: flex; justify-content:flex-start;
+}
+#username:hover{
+    color: #277AF7;
+    cursor: pointer;
+    border-bottom: 2px solid #277AF7;
+}
+
+.account:hover{
+    color: #277AF7;
+    cursor: pointer;
+    border-bottom: 2px solid #277AF7;
+}
+
+.filegame{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    background-color: #C8AF85;
+    height: 60px;
+    width: 170px;
+    border-radius: 0 0 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+}
+
+
+
+
+.content{
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+}
+
+.tt{
+    display: flex;
+    margin-top: 15px;
+}
+
+.tt-tieude{
+    display: flex;
+    width: 150px;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tt-tieude span{
+    display: flex;
+    justify-content: start;
+}
+
+.tt-tieude img{
+    display: flex;
+    width: 10px;
+    height: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.divlon{
+    color: white;
+    font-size: 15px;
+}
+
+.divnho{
+    color: #B4B4B4;
+    font-size: 12px;
+    /* display: flex; */
+    /* justify-content: center; */
+    word-spacing: 1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.divtext{
+    margin-left: 10px;
+    /* border: 1px solid red; */
+    width: 650px;
+}
+
+.ctn{
+    display: flex;
+    border: 1px solid black;
+    background-color: black;
+    margin-top: 20px;
+}
+
+.img-news{
+    width: 150px;
+}
+
+#news-info{
+    /* border: 1px solid blue; */
+    width: 850px;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+}
+
+.date{
+    color: #B4B4B4;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    width: 100%;
+    margin-top: 15px;
+    /* opacity: 0.9; */
+    background-color: gray;
+    /* background: transparent; */
+}
+
+.footer{
+    /* border: 1px solid red;
+    position: absolute; */
+}
+
+.footer{
+    background-color: black;
+    width: 100%;
+    /* z-index: 1; */
+    color: white;
+    height: 200px;
+}
+
+.footer img{
+    width: 70px;
+    padding: 0 5px;
+}
+
+.footer-line1{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-line2{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-line3{
+    display: flex;
+    justify-content: center;
+    color: #767676;
+    font-size: 12px;
+}
+
+.footer-line4{
+    display: flex;
+    justify-content: center;
+    color: #767676;
+    font-size: 12px;
+}
+.footer-line4 div{
+    width: 800px;
+    text-align: center;
+}
+
+.txt-ftline2{
+    font-size: 12px;
+    padding: 0 12px;
+    /* border: 1px solid red; */
+    text-decoration: none;
+    color: #B4B4B4;
+}
+
+.txt-ftline2:hover{
+    text-decoration: underline;
+}
+
+.background{
+    width: 100%;
+    height: 700px;
+}
+
+.ctn-main{
+    display: flex;
+    justify-content: center;
+    width: 1260px;
+}
+
+.main{
+    height: 700px;
+}
